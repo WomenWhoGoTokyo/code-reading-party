@@ -1,0 +1,6 @@
+db:
+  host:     localhost
+  name:     animal
+  user:     localhost
+  password: localhost
+  port:     6666
