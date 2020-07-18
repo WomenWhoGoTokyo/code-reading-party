@@ -27,7 +27,9 @@ func (h *Handler) ListHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// TODO: JSON でレスポンス
-	fmt.Println(list)
+	w.Header().Set("Content-Type", "application/json")
+	fmt.Fprintf(w, "%v", list)
+	// w.Write(responseJson)
 }
 
 func (h *Handler) AddHandler(w http.ResponseWriter, r *http.Request) {
@@ -67,4 +69,7 @@ func (h *Handler) AddHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// TODO: JSON でレスポンス
+	w.Header().Set("Content-Type", "application/json")
+	fmt.Fprintf(w, "%v", art)
+	// w.Write(responseJson)
 }
