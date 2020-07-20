@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-simple
+  labels:
+    app: go-simple
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: go-simple
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: go-simple
+    spec:
+      containers:
+      - image: mkurimoto/go_simple:step3
+        name: go-simple
+        ports:
+        - containerPort: 8080
+          name: go-simple
