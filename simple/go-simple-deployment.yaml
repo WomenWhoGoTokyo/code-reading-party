@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: go-simple
   labels:
-    app: go-simple
+    app: go-simplgo-simplee
 spec:
   replicas: 2
   selector:
