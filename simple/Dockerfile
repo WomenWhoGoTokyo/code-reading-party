@@ -8,5 +8,5 @@ RUN go build -o simple
 # マルチ
 FROM ubuntu:latest
 COPY --from=stage1 /app/simple /app/simple
-EXPOSE 8080
+EXPOSE 9000
 CMD ["/app/simple"]
