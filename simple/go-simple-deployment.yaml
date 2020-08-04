@@ -17,8 +17,8 @@ spec:
         app: go-simple
     spec:
       containers:
-      - image: mkurimoto/go_simple:step3
+      - image: mkurimoto/go_simple:step5
         name: go-simple
         ports:
-        - containerPort: 8080
+        - containerPort: 9000
           name: go-simple
