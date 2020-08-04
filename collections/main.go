@@ -50,6 +50,6 @@ func main() {
 	http.HandleFunc("/add", handlers.AddHandler)
 	http.HandleFunc("/list", handlers.ListHandler)
 
-	// Stat
+	// Start
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
